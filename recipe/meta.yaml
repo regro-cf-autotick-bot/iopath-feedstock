@@ -1,5 +1,5 @@
 {% set name = "iopath" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/facebookresearch/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: bffb4741b25badba31c685db6777cc06a1e236af211cca53474703e54441fd19
+  sha256: 3f17a6558fa62fdc2ab1ecdf7c106576167fb8bb19f1612289fd88467535ad7a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
